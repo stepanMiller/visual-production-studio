@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Visual production studio — коммерческое видео, motion и интерактивные digital experiences.">
+  <meta name="theme-color" content="#0c0d0c">
+  <title>Visual Production Studio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c0d0c'/%3E%3Cpath d='M16 18h8l8 28 8-28h8L37 52H27z' fill='%23f0ede7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip" href="#content">К содержанию</a>
+
+  <header class="header" data-header>
+    <a class="brand" href="#top" aria-label="Visual Production Studio">
+      <span>VISUAL</span><small>PRODUCTION</small>
+    </a>
+    <nav aria-label="Основная навигация">
+      <a href="#work">Работы</a>
+      <a href="#services">Услуги</a>
+      <a href="#process">Процесс</a>
+      <a href="#about">О студии</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="pill pill-outline" href="#contact">Обсудить проект <b aria-hidden="true">→</b></a>
+    <button class="menu" type="button" aria-label="Открыть меню" aria-expanded="false" data-menu><i></i><i></i></button>
+  </header>
+
+  <div class="mobile-nav" data-mobile-nav hidden>
+    <a href="#work">Работы</a><a href="#services">Услуги</a><a href="#process">Процесс</a><a href="#about">О студии</a><a href="#contact">Контакты</a>
+  </div>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <video class="hero-media" autoplay muted loop playsinline preload="auto" poster="assets/hero-plate.png">
+        <source src="assets/hero-loop.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-copy reveal">
+        <h1>Превращаем<br>продукты, идеи и истории<br>в видео, которые выглядят<br>как <em>большой production.</em></h1>
+        <p>Cinematic video · motion · interactive experiences<br>AI-assisted production без дорогой классической съёмки.</p>
+        <button class="watch" type="button" data-video="assets/verba-heart.mp4" aria-label="Смотреть VERBA Heart">
+          <span class="play">▶</span><span>Смотреть главный кейс<small>VERBA Heart · 00:28</small></span>
+        </button>
+      </div>
+      <a class="hero-case" href="#verba">
+        <i></i><span><b>VERBA Heart</b><small>Интерактивный опыт о здоровье</small><u>Смотреть кейс →</u></span>
+      </a>
+    </section>
+
+    <div class="project-strip" aria-label="Проекты и направления">
+      <span>VERBA</span><span>BALI <small>beyond the postcard</small></span><span>EDITORIAL</span><span>—</span><span>ПРОЕКТЫ И НАПРАВЛЕНИЯ</span><span>INDEPENDENT</span>
+    </div>
+
+    <section class="work dark" id="work">
+      <div class="section-intro reveal">
+        <div><p class="eyebrow">Избранные работы</p><h2>Разные задачи.<br>Один подход — высокий уровень.</h2></div>
+        <a href="#verba">Смотреть главный кейс →</a>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card reveal" id="verba">
+          <button class="card-media" type="button" data-video="assets/verba-heart.mp4" aria-label="Смотреть фильм VERBA Heart">
+            <img src="assets/verba-heart-poster.jpg" alt="Кадр из фильма VERBA Heart" width="1280" height="720">
+            <span class="round-play">▶</span>
+          </button>
+          <div class="card-copy"><h3>VERBA Heart</h3><p>Главный кейс · Медицина / Wellness</p><a href="https://verba-heart.website.yandexcloud.net" target="_blank" rel="noopener">Интерактивный опыт ↗</a></div>
+        </article>
+
+        <article class="work-card reveal">
+          <button class="card-media" type="button" data-video="assets/forest-film.mp4" aria-label="Смотреть эмоциональный фильм">
+            <img src="assets/forest-film-poster.jpg" alt="Кадр фильма с двойной экспозицией леса" width="1280" height="720">
+            <span class="round-play">▶</span>
+          </button>
+          <div class="card-copy"><h3>Сердце не всегда предупреждает</h3><p>Emotional film · Visual metaphor</p><button type="button" data-video="assets/forest-film.mp4">Смотреть фильм →</button></div>
+        </article>
+
+        <article class="work-card reveal">
+          <a class="card-media" href="cases/bali/index.html" target="_blank" rel="noopener">
+            <img src="cases/bali/hero.jpg" alt="Побережье Бали" width="2400" height="1599">
+            <span class="round-play">↗</span>
+          </a>
+          <div class="card-copy"><h3>Bali: Beyond the Postcard</h3><p>Интерактивная история · Travel</p><a href="cases/bali/index.html" target="_blank" rel="noopener">Открыть проект ↗</a></div>
+        </article>
+
+        <article class="work-card reveal">
+          <a class="card-media plan-preview" href="#patient-plan" aria-label="Подробнее о Patient Plan">
+            <span class="mini-title">Персональный план</span>
+            <strong>Здоровье<br><em>в балансе</em></strong>
+            <span class="mini-route"><i>1</i><i>2</i><i>3</i><i>4</i></span>
+            <span class="mini-table"></span>
+            <span class="round-play dark-play">↓</span>
+          </a>
+          <div class="card-copy"><h3>VERBA Patient Plan</h3><p>Инфографика · Information design</p><a href="#patient-plan">Смотреть систему →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="services light" id="services">
+      <div class="services-head reveal">
+        <div><p class="eyebrow">Что мы делаем</p><h2>Визуальные решения<br>для реальных задач бизнеса.</h2></div>
+        <p>От рекламного фильма до интерактивного web experience — подбираем формат под задачу, аудиторию и канал.</p>
+        <a class="pill pill-dark" href="#contact">Обсудить проект →</a>
+      </div>
+      <div class="service-grid">
+        <article class="service reveal"><img src="assets/amber-concept.png" alt="Абстрактный визуальный концепт" width="1586" height="992"><h3>Commercial / Image Film</h3><p>Рекламные и имиджевые ролики, которые усиливают бренд.</p><strong>от 49 000 ₽</strong><small>Изображение: visual concept</small></article>
+        <article class="service reveal"><img src="assets/editorial-guide.png" alt="Редакционная инфографика о питании" width="1467" height="825"><h3>Product / Service Story</h3><p>Показываем продукт, услугу или сложную идею через киноязык.</p><strong>от 79 000 ₽</strong></article>
+        <article class="service reveal"><img src="assets/verba-heart-poster.jpg" alt="Медицинская 3D-визуализация сосудов" width="1280" height="720"><h3>Motion / Explainer</h3><p>Графика, данные, интерфейсы и presentation films.</p><strong>от 119 000 ₽</strong></article>
+        <article class="service reveal"><img src="cases/bali/bali/ubud-jungle.jpg" alt="Тропический лес на Бали" width="1800" height="1200"><h3>Interactive Experience</h3><p>Интерактивные веб-проекты и нестандартные форматы.</p><strong>по смете</strong></article>
+      </div>
+      <p class="price-note">Цены предварительные: итог зависит от хронометража, сложности графики и количества адаптаций.</p>
+    </section>
+
+    <section class="patient light" id="patient-plan">
+      <div class="patient-title reveal"><p class="eyebrow">Supporting work</p><h2>Информация, которой<br>можно пользоваться.</h2><p>Двухстраничная medical-editorial система: цели, маршрут на 90 дней, расписание препаратов и контроль обследований.</p></div>
+      <div class="patient-sheet reveal" aria-label="Адаптивное представление инфографики VERBA Patient Plan">
+        <div class="sheet-cover">
+          <small>Персональный план</small><h3>Здоровье<br><em>в балансе</em></h3><p>Больше энергии.<br>Активная и полноценная<br>жизнь завтра.</p><span>Профилактика · диагностика · образ жизни</span>
+          <div class="body-lines" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+        </div>
+        <div class="sheet-info">
+          <h3>Мой маршрут на 90 дней</h3>
+          <div class="steps"><div><b>1</b><span>Сейчас</span><small>Начать план</small></div><div><b>2</b><span>Каждую неделю</span><small>Контроль показателей</small></div><div><b>3</b><span>Конец периода</span><small>Контроль анализов</small></div><div><b>4</b><span>Консультация</span><small>Следующий шаг</small></div></div>
+          <h3>Мои препараты</h3>
+          <div class="rows"><div><span>Когда</span><span>Препарат</span><span>Схема</span><span>Цель</span></div><div><span>Утро</span><b>Назначение врача</b><span>Индивидуально</span><span>Сохранение результата</span></div><div><span>После еды</span><b>Ежедневный приём</b><span>По схеме</span><span>Контроль показателей</span></div><div><span>На ночь</span><b>Вечерний приём</b><span>По схеме</span><span>Восстановление</span></div></div>
+          <div class="checkups"><div><b>1</b><span>План обследования</span></div><div><b>2</b><span>Контроль эффективности</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process dark" id="process">
+      <img class="process-bg" src="assets/hero-plate.png" alt="" width="1586" height="992">
+      <div class="process-overlay"></div>
+      <div class="process-head reveal"><p class="eyebrow">Как мы работаем</p><h2>Чёткий процесс.<br>Предсказуемый результат.</h2></div>
+      <ol class="timeline">
+        <li class="reveal"><b>01</b><span>Стратегия<br>и идея</span></li>
+        <li class="reveal"><b>02</b><span>Сценарий<br>и visual direction</span></li>
+        <li class="reveal"><b>03</b><span>Production<br>AI + motion + post</span></li>
+        <li class="reveal"><b>04</b><span>Правки<br>до 2 раундов</span></li>
+        <li class="reveal"><b>05</b><span>Финальный ролик<br>и адаптации</span></li>
+      </ol>
+      <a class="process-link" href="#about">Подробнее о подходе →</a>
+    </section>
+
+    <section class="about light" id="about">
+      <p class="eyebrow reveal">О студии</p>
+      <div class="about-grid"><h2 class="reveal">Маленькая команда.<br><em>Production-мышление.</em></h2><p class="reveal">Работаем как единая creative production system: разбираемся в задаче, выстраиваем драматургию, создаём визуальный язык и доводим материал до финального master. AI для нас — производственный инструмент, а не содержание работы.</p></div>
+    </section>
+
+    <section class="contact light" id="contact">
+      <div class="contact-copy reveal"><h2>Готовы обсудить<br>ваш проект?</h2><p>Расскажите о задаче — предложим формат, идею и ориентир по бюджету.</p></div>
+      <form data-form class="reveal">
+        <label><span>Имя</span><input name="name" placeholder="Как к вам обращаться" autocomplete="name" required></label>
+        <label><span>Контакт</span><input name="contact" placeholder="Email или Telegram" autocomplete="email" required></label>
+        <label><span>Задача</span><textarea name="task" rows="2" placeholder="Что нужно создать?" required></textarea></label>
+        <button class="pill pill-dark" type="submit">Подготовить бриф →</button>
+        <output data-status aria-live="polite"></output>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#top"><span>VISUAL</span><small>PRODUCTION</small></a><p>Commercial video · Motion · Interactive experiences</p><p>© 2026</p></footer>
+
+  <dialog data-dialog aria-label="Просмотр видео"><button class="close" type="button" data-close aria-label="Закрыть">×</button><video data-dialog-video controls playsinline></video></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
