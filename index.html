@@ -33,21 +33,25 @@
   </div>
 
   <main id="content">
-    <section class="hero" id="top">
-      <video class="hero-media" autoplay muted loop playsinline preload="auto" poster="assets/hero-plate.png">
+    <section class="hero" id="top" data-hero>
+      <video class="hero-media" data-hero-media autoplay muted loop playsinline preload="auto" poster="assets/hero-plate.png">
         <source src="assets/hero-loop.mp4" type="video/mp4">
       </video>
-      <div class="hero-overlay"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-reflection" aria-hidden="true"></div>
       <div class="hero-copy reveal">
-        <h1>Превращаем<br>продукты, идеи и истории<br>в видео, которые выглядят<br>как <em>большой production.</em></h1>
-        <p>Cinematic video · motion · interactive experiences<br>AI-assisted production без дорогой классической съёмки.</p>
+        <p class="hero-kicker"><span>Independent visual production studio</span><span>Film · Motion · Interactive</span></p>
+        <h1>Идеи обретают<br><em>масштаб.</em></h1>
+        <p class="hero-lede">Создаём визуальные истории для брендов —<br>от первого замысла до финального кадра.</p>
         <button class="watch" type="button" data-video="assets/verba-heart.mp4" aria-label="Смотреть VERBA Heart">
-          <span class="play">▶</span><span>Смотреть главный кейс<small>VERBA Heart · 00:28</small></span>
+          <span class="play">▶</span><span>Смотреть showreel<small>VERBA Heart · 00:28</small></span>
         </button>
       </div>
+      <p class="hero-foot" aria-hidden="true"><span>Visual direction</span><span>Production</span><span>Post</span></p>
       <a class="hero-case" href="#verba">
         <i></i><span><b>VERBA Heart</b><small>Интерактивный опыт о здоровье</small><u>Смотреть кейс →</u></span>
       </a>
+      <a class="hero-scroll" href="#work" aria-label="Перейти к избранным работам"><span>Scroll</span><i></i></a>
     </section>
 
     <div class="project-strip" aria-label="Проекты и направления">

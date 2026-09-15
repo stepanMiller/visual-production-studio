@@ -4,9 +4,24 @@ const mobileNav=document.querySelector('[data-mobile-nav]');
 const dialog=document.querySelector('[data-dialog]');
 const dialogVideo=document.querySelector('[data-dialog-video]');
 const status=document.querySelector('[data-status]');
+const hero=document.querySelector('[data-hero]');
+const heroMedia=document.querySelector('[data-hero-media]');
 
 const onScroll=()=>header.classList.toggle('stuck',scrollY>24);
 onScroll();addEventListener('scroll',onScroll,{passive:true});
+
+const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+if(hero&&heroMedia&&!reducedMotion.matches){
+  const finePointer=matchMedia('(pointer: fine)').matches;
+  const setHeroMotion=(x=0,y=0)=>{hero.style.setProperty('--hero-x',`${x}px`);hero.style.setProperty('--hero-y',`${y}px`)};
+  if(finePointer){
+    hero.addEventListener('pointermove',event=>{const rect=hero.getBoundingClientRect();setHeroMotion(((event.clientX-rect.left)/rect.width-.5)*-12,((event.clientY-rect.top)/rect.height-.5)*-8)});
+    hero.addEventListener('pointerleave',()=>setHeroMotion());
+  }
+  const moveHeroOnScroll=()=>hero.style.setProperty('--hero-scroll',`${Math.min(scrollY*.035,28)}px`);
+  moveHeroOnScroll();addEventListener('scroll',moveHeroOnScroll,{passive:true});
+  heroMedia.addEventListener('loadedmetadata',()=>{heroMedia.playbackRate=.82},{once:true});
+}
 
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');mobileNav.hidden=!open;document.body.classList.toggle('lock',open)});
 mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');mobileNav.hidden=true;document.body.classList.remove('lock')}));
