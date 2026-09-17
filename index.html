@@ -14,14 +14,13 @@
   <a class="skip" href="#content">К содержанию</a>
 
   <header class="header" data-header>
-    <a class="brand miller-wordmark" href="#top" aria-label="MILLER Studio">
-      <span>MILLER</span><small>STUDIO</small>
+    <a class="brand miller-wordmark" href="#top" aria-label="MILLER Visual Production Studio">
+      <span>MILLER</span><small>Visual Production Studio</small>
     </a>
     <nav aria-label="Основная навигация">
       <a href="#work">Работы</a>
       <a href="#services">Услуги</a>
       <a href="#process">Процесс</a>
-      <a href="#pricing">Стоимость</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="pill pill-outline" href="#contact">Обсудить проект <b aria-hidden="true">→</b></a>
@@ -29,7 +28,7 @@
   </header>
 
   <div class="mobile-nav" data-mobile-nav hidden>
-    <a href="#work">Работы</a><a href="#services">Услуги</a><a href="#process">Процесс</a><a href="#pricing">Стоимость</a><a href="#faq">FAQ</a><a href="#contact">Контакты</a>
+    <a href="#work">Работы</a><a href="#services">Услуги</a><a href="#process">Процесс</a><a href="#faq">FAQ</a><a href="#contact">Контакты</a>
   </div>
 
   <main id="content">
@@ -41,8 +40,8 @@
       <div class="hero-reflection" aria-hidden="true"></div>
       <div class="hero-copy reveal">
         <p class="hero-kicker"><span>Independent visual production studio</span><span>Film · Motion · Interactive</span></p>
-        <h1>Идеи обретают<br><em>масштаб.</em></h1>
-        <p class="hero-lede">Создаём визуальные истории для брендов —<br>от первого замысла до финального кадра.</p>
+        <h1>Видео для бизнеса,<br>которые выглядят как<br><em>большой production.</em></h1>
+        <p class="hero-lede">Идея, сценарий, visual direction, motion и постпродакшн —<br>без дорогой классической съёмочной группы.</p>
         <button class="watch" type="button" data-video="assets/verba-heart.mp4" aria-label="Смотреть VERBA Heart">
           <span class="play">▶</span><span>Смотреть showreel<small>VERBA Heart · 00:28</small></span>
         </button>
@@ -82,12 +81,11 @@
         </article>
 
         <article class="work-card work-card-plan reveal">
-          <div class="card-media plan-preview" aria-label="Health in Balance editorial system">
-            <span class="mini-title">Personal health plan</span><strong>Health<br><em>in Balance</em></strong>
-            <span class="mini-route"><i>1</i><i>2</i><i>3</i><i>4</i></span><span class="mini-table"></span>
-            <span class="work-label dark-label">03 / Information design</span>
-          </div>
-          <div class="card-copy"><div><small>Healthcare editorial</small><h3>Health in Balance</h3></div><div class="card-meta"><p>Сложная медицинская информация собрана в понятную персональную систему.</p><span>Editorial · Data · Layout</span></div></div>
+          <button class="card-media editorial-preview" type="button" data-image="assets/editorial-guide.png" aria-label="Увеличить проект Health in Balance">
+            <img src="assets/editorial-guide.png" alt="Инфографика Health in Balance" width="1467" height="825">
+            <span class="work-label dark-label">03 / Information design</span><span class="expand-mark">↗</span>
+          </button>
+          <div class="card-copy"><div><small>Information Design / Healthcare</small><h3>Health in Balance</h3></div><div class="card-meta"><p>Сложная медицинская информация собрана в понятную персональную систему.</p><button type="button" data-image="assets/editorial-guide.png">Увеличить →</button></div></div>
         </article>
 
         <article class="work-card work-card-development reveal">
@@ -114,14 +112,14 @@
     </section>
 
     <section class="services light" id="services">
-      <div class="sales-head reveal"><p class="eyebrow">02 / Services</p><h2>Формат следует<br>за задачей.</h2><p>Собираем проект вокруг результата: что зритель должен понять, почувствовать или сделать после просмотра.</p></div>
-      <div class="service-lines">
-        <article class="service-line reveal"><span>01</span><h3>Image &amp; Commercial Film</h3><p>Имиджевые, рекламные и launch-фильмы для брендов и продуктов.</p><b>Concept · Script · Production · Post</b></article>
-        <article class="service-line reveal"><span>02</span><h3>Product Story</h3><p>Показываем ценность продукта через сценарий, предметный кадр и motion.</p><b>30–90 sec · Master + cutdowns</b></article>
-        <article class="service-line reveal"><span>03</span><h3>Motion &amp; Explainer</h3><p>Объясняем сложные сервисы, технологии и B2B-продукты без визуального шума.</p><b>Storyboard · Design · Animation</b></article>
-        <article class="service-line reveal"><span>04</span><h3>Interactive Experience</h3><p>Создаём web-истории, где фильм, текст и взаимодействие работают как единый опыт.</p><b>Art direction · Web · Interaction</b></article>
+      <div class="sales-head reveal"><p class="eyebrow">02 / Что мы делаем</p><h2>Формат следует<br>за задачей.</h2><p>Собираем проект вокруг результата: что зритель должен понять, почувствовать или сделать после просмотра.</p></div>
+      <div class="service-showcase">
+        <article class="service-offer reveal"><div class="service-visual service-visual-film"><span>01</span><b>Film</b></div><div class="service-copy"><h3>Commercial / Image Film</h3><p>Рекламные и имиджевые ролики, которые усиливают бренд.</p><strong>от 49 000 ₽</strong></div></article>
+        <article class="service-offer reveal"><div class="service-visual service-visual-product"><span>02</span><b>Story</b></div><div class="service-copy"><h3>Product / Service Story</h3><p>Показываем продукт, услугу или сложную идею через визуальную историю.</p><strong>от 79 000 ₽</strong></div></article>
+        <article class="service-offer reveal"><div class="service-visual service-visual-motion"><span>03</span><b>Motion</b></div><div class="service-copy"><h3>Motion / Explainer</h3><p>Motion design, графика, данные, интерфейсы и объясняющие истории.</p><strong>от 119 000 ₽</strong></div></article>
+        <article class="service-offer reveal"><div class="service-visual service-visual-interactive"><span>04</span><b>Digital</b></div><div class="service-copy"><h3>Interactive Experience</h3><p>Интерактивные web-проекты и нестандартные digital-форматы.</p><strong>по смете</strong></div></article>
       </div>
-      <a class="section-cta reveal" href="#pricing">Посмотреть форматы и бюджеты <b>↓</b></a>
+      <p class="services-note reveal">Итоговый бюджет зависит от хронометража, сложности и объёма материалов. В базовый проект включено до двух раундов консолидированных правок. Дополнительные адаптации и существенное изменение уже утверждённой концепции рассчитываются отдельно.</p>
     </section>
 
     <section class="process dark" id="process">
@@ -135,18 +133,8 @@
       </ol>
     </section>
 
-    <section class="pricing light" id="pricing">
-      <div class="sales-head reveal"><p class="eyebrow">04 / Pricing</p><h2>Понятный масштаб<br>до старта.</h2><p>Финальная смета зависит от хронометража, способа производства и количества версий. Ниже — рабочие ориентиры.</p></div>
-      <div class="pricing-grid">
-        <article class="price-card reveal"><span>01 / Essential</span><h3>Concept Film</h3><strong>от 120 000 ₽</strong><p>Для теста идеи, продукта или короткой digital-кампании.</p><ul><li>Creative direction</li><li>Сценарий до 30 секунд</li><li>Один master-формат</li><li>2 раунда правок</li></ul><a href="#contact">Обсудить формат →</a></article>
-        <article class="price-card price-card-featured reveal"><span>02 / Production</span><h3>Brand / Product Film</h3><strong>от 250 000 ₽</strong><p>Полноценный ролик с уникальным визуальным направлением.</p><ul><li>Концепция и сценарий</li><li>Production + motion + post</li><li>Master до 60 секунд</li><li>2 адаптации и 2 раунда правок</li></ul><a href="#contact">Получить смету →</a></article>
-        <article class="price-card reveal"><span>03 / Signature</span><h3>Visual Campaign</h3><strong>от 450 000 ₽</strong><p>Система материалов для запуска, кампании или новой визуальной территории.</p><ul><li>Creative platform</li><li>Hero film + cutdowns</li><li>Несколько форматов</li><li>Расширенная production-команда</li></ul><a href="#contact">Собрать проект →</a></article>
-      </div>
-      <p class="pricing-note">После короткого брифа подготовим вариант формата и диапазон бюджета. Детальная смета фиксируется до начала production.</p>
-    </section>
-
     <section class="faq dark" id="faq">
-      <div class="faq-head reveal"><p class="eyebrow">05 / FAQ &amp; revisions</p><h2>До старта<br>всё прозрачно.</h2></div>
+      <div class="faq-head reveal"><p class="eyebrow">04 / FAQ &amp; revisions</p><h2>До старта<br>всё прозрачно.</h2></div>
       <div class="faq-list">
         <details class="reveal" open><summary><span>01</span>Сколько раундов правок входит в стоимость?<i>+</i></summary><p>Два консолидированных раунда на согласованных этапах. Сначала утверждаем направление и сценарий, затем монтаж и детали финального master.</p></details>
         <details class="reveal"><summary><span>02</span>Что считается дополнительными правками?<i>+</i></summary><p>Изменение утверждённой концепции, сценария или объёма deliverables после запуска production. Такие изменения оцениваем отдельно до начала работ.</p></details>
@@ -157,7 +145,7 @@
     </section>
 
     <section class="contact cta-section light" id="contact">
-      <div class="contact-copy reveal"><p class="eyebrow">06 / Start a project</p><h2>Расскажите задачу.<br>Предложим форму.</h2><p>Вернёмся с уточняющими вопросами, подходом и ориентиром по бюджету.</p></div>
+      <div class="contact-copy reveal"><p class="eyebrow">05 / Start a project</p><h2>Расскажите задачу.<br>Предложим форму.</h2><p>Вернёмся с уточняющими вопросами, подходом и ориентиром по бюджету.</p></div>
       <form data-form class="reveal">
         <label><span>Имя</span><input name="name" placeholder="Как к вам обращаться" autocomplete="name" required></label>
         <label><span>Контакт</span><input name="contact" placeholder="Email или Telegram" autocomplete="email" required></label>
@@ -168,9 +156,9 @@
     </section>
   </main>
 
-  <footer><a class="brand miller-wordmark" href="#top"><span>MILLER</span><small>STUDIO</small></a><p>Film · Motion · Interactive experiences</p><p>© 2026 / Moscow</p></footer>
+  <footer><a class="brand miller-wordmark" href="#top"><span>MILLER</span><small>Visual Production Studio</small></a><p>Film · Motion · Interactive experiences</p><p>© 2026 / Moscow</p></footer>
 
-  <dialog data-dialog aria-label="Просмотр видео"><button class="close" type="button" data-close aria-label="Закрыть">×</button><video data-dialog-video controls playsinline></video></dialog>
+  <dialog data-dialog aria-label="Просмотр медиа"><button class="close" type="button" data-close aria-label="Закрыть">×</button><video data-dialog-video controls playsinline></video><img data-dialog-image alt=""></dialog>
   <script src="app.js"></script>
 </body>
 </html>
