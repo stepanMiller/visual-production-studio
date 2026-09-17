@@ -32,7 +32,7 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=`
 
 function resetDialog(){dialogVideo.pause();dialogVideo.removeAttribute('src');dialogVideo.load();dialogImage.removeAttribute('src');dialogImage.alt='';dialog.classList.remove('image-open')}
 document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{resetDialog();dialogVideo.src=button.dataset.video;dialog.showModal();dialogVideo.play().catch(()=>{})}));
-document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{resetDialog();dialog.classList.add('image-open');dialogImage.src=button.dataset.image;dialogImage.alt='Health in Balance — информационный дизайн';dialog.showModal()}));
+document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{resetDialog();dialog.classList.add('image-open');dialogImage.src=button.dataset.image;dialogImage.alt=button.dataset.imageAlt||'Health in Balance — информационный дизайн';dialog.showModal()}));
 document.querySelector('[data-close]').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('close',resetDialog);
 dialog.addEventListener('click',event=>{const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close()});
