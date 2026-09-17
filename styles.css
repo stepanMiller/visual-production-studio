@@ -49,6 +49,17 @@ dialog{width:min(95vw,1200px);max-width:none;padding:0;border:0;background:#000;
 .editorial-preview img{width:100%;height:100%;padding:clamp(18px,2.4vw,38px);object-fit:contain;filter:none}
 .editorial-preview:hover img{filter:none;transform:scale(1.012)}
 .expand-mark{position:absolute;right:22px;bottom:20px;display:grid;width:42px;height:42px;place-items:center;border:1px solid #173c3366;border-radius:50%;background:#f5f4efb8;color:#173c33;font-size:15px}
+.infographic-feature{grid-column:1/-1;padding:clamp(28px,4vw,64px);background:#e9e9e2;color:#173c33}
+.infographic-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.65fr);align-items:end;gap:7vw;margin-bottom:clamp(28px,4vw,54px)}
+.infographic-head small{display:block;margin-bottom:15px;font-size:7px;letter-spacing:.2em;text-transform:uppercase}
+.infographic-head h3{margin:0;font:400 clamp(45px,6vw,92px)/.86 var(--serif);letter-spacing:-.055em}
+.infographic-head p{max-width:480px;margin:0;color:#52645f;font-size:12px;line-height:1.65}
+.infographic-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+.infographic-gallery button{position:relative;overflow:hidden;padding:0;border:0;background:#f5f4ef;color:#173c33;cursor:pointer}
+.infographic-gallery img{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;transition:transform .8s cubic-bezier(.2,.65,.2,1)}
+.infographic-gallery button:hover img{transform:scale(1.012)}
+.infographic-gallery span{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;border-top:1px solid #173c332d;font-size:8px;letter-spacing:.16em;text-transform:uppercase}
+.infographic-gallery i{font:14px var(--sans)}
 
 .service-showcase{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
 .service-offer{display:grid;grid-template-columns:minmax(170px,.72fr) minmax(220px,1fr);min-height:300px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}
@@ -91,6 +102,11 @@ dialog.image-open [data-dialog-video]{display:none}
   .miller-work-grid .card-media,.miller-work-grid .work-card-lead .card-media,.miller-work-grid .work-card-film .card-media,.miller-work-grid .work-card-plan .card-media,.miller-work-grid .work-card-development .card-media,.miller-work-grid .work-card-concept .card-media{height:auto;aspect-ratio:16/10}
   .miller-work-grid .card-copy,.miller-work-grid .work-card-film .card-copy{min-height:0}
   .editorial-preview img{padding:14px}
+  .infographic-feature{padding:42px 20px 20px}
+  .infographic-head{grid-template-columns:1fr;gap:24px;margin-bottom:30px}
+  .infographic-head h3{font-size:47px}
+  .infographic-head p{font-size:11px}
+  .infographic-gallery{grid-template-columns:1fr;gap:3px}
   .service-offer{grid-template-columns:1fr;min-height:0}
   .service-visual{min-height:210px}
   .service-copy{min-height:210px;padding:24px 20px 27px}
