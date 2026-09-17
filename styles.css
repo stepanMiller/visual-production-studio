@@ -1,4 +1,10 @@
-:root{--dark:#0c0d0c;--dark2:#121311;--paper:#f1eee7;--white:#f4f0e9;--ink:#151613;--muted:#9d9d97;--line:rgba(255,255,255,.15);--line2:rgba(21,22,19,.2);--serif:"Iowan Old Style","Baskerville","Times New Roman",serif;--sans:Arial,Helvetica,sans-serif;--g:clamp(26px,4.6vw,72px)}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 600;font-display:swap;src:url("assets/fonts/manrope-cyrillic.woff2") format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 600;font-display:swap;src:url("assets/fonts/manrope-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/playfair-display-cyrillic.woff2") format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/playfair-display-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:400;font-display:swap;src:url("assets/fonts/playfair-display-italic-cyrillic.woff2") format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:400;font-display:swap;src:url("assets/fonts/playfair-display-italic-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--dark:#0c0d0c;--dark2:#121311;--paper:#f1eee7;--white:#f4f0e9;--ink:#151613;--muted:#9d9d97;--line:rgba(255,255,255,.15);--line2:rgba(21,22,19,.2);--serif:"Playfair Display","Iowan Old Style","Baskerville","Times New Roman",serif;--sans:"Manrope",Arial,Helvetica,sans-serif;--g:clamp(26px,4.6vw,72px);--content:1520px}
 *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--dark)}body{margin:0;background:var(--dark);color:var(--white);font:16px/1.45 var(--sans);overflow-x:hidden}body.lock{overflow:hidden}a{color:inherit}img,video{display:block;width:100%}button,input,textarea{font:inherit}button{color:inherit}.skip{position:fixed;left:12px;top:10px;z-index:99;padding:9px 13px;background:var(--paper);color:var(--ink);transform:translateY(-150%)}.skip:focus{transform:none}
 .header{position:absolute;z-index:20;top:0;left:0;right:0;height:78px;padding:0 var(--g);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;transition:.25s}.header.stuck{position:fixed;height:62px;background:#0c0d0ce8;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.brand{width:max-content;text-decoration:none;display:flex;align-items:baseline;gap:9px;letter-spacing:.38em}.brand span{font-size:13px}.brand small{font:10px var(--serif);letter-spacing:.28em;opacity:.62}.header nav{display:flex;gap:34px}.header nav a{font-size:12px;text-decoration:none}.header nav a:hover{text-decoration:underline;text-underline-offset:5px}.pill{display:inline-flex;align-items:center;justify-content:center;gap:15px;min-height:43px;padding:0 20px;border-radius:99px;text-decoration:none;font-size:12px;border:1px solid transparent}.pill-outline{justify-self:end;border-color:#ffffff87;background:#090a091f}.pill-outline:hover{background:var(--white);color:var(--ink)}.pill-dark{border:0;background:var(--ink);color:var(--white);cursor:pointer}.menu{display:none;justify-self:end;width:42px;height:42px;border:0;background:transparent}.menu i{display:block;width:24px;height:1px;margin:6px auto;background:currentColor}.mobile-nav{position:fixed;z-index:15;inset:0;padding:105px var(--g);background:var(--dark)}.mobile-nav a{display:block;margin-bottom:16px;text-decoration:none;font:42px/1.05 var(--serif)}
 .hero{--hero-x:0px;--hero-y:0px;--hero-scroll:0px;position:relative;isolation:isolate;height:100svh;min-height:680px;display:flex;align-items:flex-end;overflow:hidden;overflow:clip;background:#101412}.hero-media{position:absolute;z-index:-4;inset:-2%;width:104%;height:104%;object-fit:cover;object-position:center;filter:saturate(.86) contrast(1.03);transform:translate3d(var(--hero-x),calc(var(--hero-y) + var(--hero-scroll)),0) scale(1.035);transition:transform 1.6s cubic-bezier(.2,.65,.2,1);will-change:transform}.hero-overlay{position:absolute;z-index:-3;inset:0;background:linear-gradient(90deg,#080a09d9 0%,#080a0994 29%,#080a0926 58%,#080a0914 76%),linear-gradient(180deg,#07090870 0%,transparent 27%,transparent 58%,#070908a6 100%)}.hero-overlay:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 68% 41%,transparent 0 16%,#05070624 58%,#05070659 100%)}.hero-reflection{position:absolute;z-index:-2;inset:-30% -15%;pointer-events:none;opacity:.3;mix-blend-mode:screen;background:linear-gradient(112deg,transparent 38%,#fff4d812 48%,#fff9e72b 51%,transparent 58%);transform:translateX(-24%);animation:heroReflection 14s ease-in-out infinite alternate}.hero-copy{position:relative;z-index:2;width:min(1040px,75vw);margin:0 0 clamp(128px,17vh,182px) var(--g)}.hero-kicker{display:flex;justify-content:space-between;width:min(680px,65vw);margin:0 0 clamp(25px,4vh,42px);color:#ebe9e2;text-transform:uppercase;letter-spacing:.24em;font-size:9px}.hero h1{margin:0;font:400 clamp(76px,9.2vw,156px)/.82 var(--serif);letter-spacing:-.064em;text-wrap:balance}.hero h1 em{font-weight:400;color:#eeeae1}.hero-lede{margin:clamp(28px,4vh,42px) 0 0;color:#e3e1da;font-size:clamp(13px,1.05vw,16px);line-height:1.5;letter-spacing:.005em}.watch{display:inline-flex;align-items:center;gap:17px;margin-top:30px;padding:0;border:0;background:transparent;text-align:left;cursor:pointer}.play,.round-play{display:grid;place-items:center;border:1px solid #ffffff8f;border-radius:50%;background:#090a092b}.play{width:52px;height:52px;padding-left:2px;font-size:10px;transition:background .35s,color .35s,transform .35s}.watch:hover .play{background:var(--white);color:var(--ink);transform:scale(1.04)}.watch>span:last-child{font-size:11px;letter-spacing:.04em}.watch small{display:block;margin-top:5px;color:#bbbdb7;font-size:8px;letter-spacing:.13em;text-transform:uppercase}.hero-foot{position:absolute;z-index:2;left:var(--g);bottom:35px;display:flex;gap:28px;margin:0;color:#d1d1ca9e;text-transform:uppercase;letter-spacing:.2em;font-size:7px}.hero-foot span+span:before{content:"/";margin-right:28px;color:#ffffff52}.hero-case{position:absolute;z-index:2;right:var(--g);bottom:45px;display:flex;gap:17px;text-decoration:none}.hero-case i{width:34px;height:1px;margin-top:10px;background:#fff7}.hero-case span{display:grid;gap:4px}.hero-case b{font:17px var(--serif)}.hero-case small{font-size:9px;color:#dedfd9ad;letter-spacing:.03em}.hero-case u{margin-top:6px;font-size:9px;text-underline-offset:5px;text-decoration-color:#ffffff69}.hero-scroll{position:absolute;z-index:2;left:50%;bottom:31px;display:grid;justify-items:center;gap:9px;color:#deddd7;text-decoration:none;text-transform:uppercase;letter-spacing:.25em;font-size:7px;transform:translateX(-50%)}.hero-scroll i{display:block;width:1px;height:27px;background:linear-gradient(#fff9,transparent);animation:scrollLine 2.8s ease-in-out infinite}@keyframes heroReflection{0%{opacity:.16;transform:translateX(-24%)}100%{opacity:.36;transform:translateX(16%)}}@keyframes scrollLine{0%,100%{opacity:.35;transform:scaleY(.55);transform-origin:top}50%{opacity:1;transform:scaleY(1);transform-origin:top}}
@@ -112,4 +118,47 @@ dialog.image-open [data-dialog-video]{display:none}
   .service-copy{min-height:210px;padding:24px 20px 27px}
   .service-copy h3{font-size:34px}
   .services-note{text-align:left}
+}
+
+/* v0.5 — desktop typography and responsive polish */
+.miller-wordmark{min-width:188px;gap:5px}
+.miller-wordmark span{font-family:var(--sans);font-weight:600;letter-spacing:.34em}
+.miller-wordmark small{font-family:var(--sans);font-size:7px;font-weight:500;line-height:1.25;letter-spacing:.19em;white-space:nowrap}
+.work-intro,.miller-work-grid,.services>.sales-head,.service-showcase,.services-note,.process>.sales-head,.process-list{width:min(100%,var(--content));margin-left:auto;margin-right:auto}
+.faq,.cta-section{max-width:calc(var(--content) + var(--g)*2);margin-left:auto;margin-right:auto}
+
+@media(min-width:951px){
+  .hero{height:clamp(680px,88svh,900px);min-height:680px}
+  .hero-copy{width:min(1240px,84vw);margin-bottom:clamp(98px,12vh,128px)}
+  .hero h1{font-size:clamp(68px,6.2vw,112px);line-height:.9;letter-spacing:-.052em}
+  .hero-lede{margin-top:28px;font-size:14px}
+  .watch{margin-top:24px}
+  .work{padding-top:62px}
+  .work-intro{grid-template-columns:minmax(0,1fr) minmax(300px,.48fr);gap:6vw;padding-bottom:36px}
+  .work-intro h2{font-size:clamp(48px,3.8vw,58px);line-height:.94}
+  .work-deck{font-size:13px;line-height:1.65}
+  .miller-work-grid .work-card-lead{grid-column:span 7}
+  .miller-work-grid .work-card-film{grid-column:span 5}
+  .miller-work-grid .work-card-development,.miller-work-grid .work-card-concept{grid-column:span 4}
+  .miller-work-grid .work-card-film .card-media{aspect-ratio:16/10}
+  .miller-work-grid .card-copy,.miller-work-grid .work-card-film .card-copy{min-height:150px}
+  .miller-work-grid .work-card-development .card-copy,.miller-work-grid .work-card-concept .card-copy{height:180px;min-height:180px}
+  .card-copy small{font-size:9px;line-height:1.4}
+  .card-meta p{font-size:11px;line-height:1.65}
+  .card-meta a,.card-meta button,.card-meta>span{font-size:10px}
+  .work-label{font-size:9px}
+  .service-copy p{font-size:12px}
+  .service-copy strong{font:600 clamp(19px,1.65vw,25px)/1.1 var(--sans);letter-spacing:-.02em}
+  .process-list p,.faq details p{font-size:12px}
+  .process-list li>b,.process-list span{font-size:9px}
+}
+
+@media(min-width:621px) and (max-width:950px){
+  .miller-work-grid .work-card-development,.miller-work-grid .work-card-concept{grid-column:span 1}
+}
+
+@media(max-width:620px){
+  .miller-wordmark{min-width:0;gap:4px}
+  .miller-wordmark span{letter-spacing:.42em}
+  .miller-wordmark small{font-size:5.5px;line-height:1;letter-spacing:.2em}
 }
