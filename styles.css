@@ -426,7 +426,7 @@ url("https://bali-expedition-2026.spartak19876.chatgpt.site/hero.jpg") center/co
   position:relative;
   background:
     linear-gradient(180deg,rgba(8,10,8,.06),rgba(8,10,8,.18) 45%,rgba(8,10,8,.72)),
-    url("assets/bali-expedition-hero.jpg") center/cover no-repeat;
+    url("assets/bali-approved-card.jpg") center/cover no-repeat;
   color:#f4f0e9
 }
 .service-visual-bali:before,.service-visual-bali:after{display:none}
