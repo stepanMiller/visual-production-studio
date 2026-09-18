@@ -1,3 +1,9 @@
+if('scrollRestoration' in history) history.scrollRestoration='manual';
+if(!location.hash){
+  addEventListener('pageshow',()=>setTimeout(()=>scrollTo(0,0),0));
+  addEventListener('load',()=>requestAnimationFrame(()=>scrollTo(0,0)),{once:true});
+}
+
 const header=document.querySelector('[data-header]');
 const menu=document.querySelector('[data-menu]');
 const mobileNav=document.querySelector('[data-mobile-nav]');
