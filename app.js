@@ -1,8 +1,19 @@
 if('scrollRestoration' in history) history.scrollRestoration='manual';
-if(!location.hash){
-  addEventListener('pageshow',()=>setTimeout(()=>scrollTo(0,0),0));
-  addEventListener('load',()=>requestAnimationFrame(()=>scrollTo(0,0)),{once:true});
-}
+const resetPagePosition=()=>{
+  if(location.hash) history.replaceState(null,'',`${location.pathname}${location.search}`);
+  scrollTo(0,0);
+};
+resetPagePosition();
+addEventListener('pageshow',()=>{
+  resetPagePosition();
+  requestAnimationFrame(resetPagePosition);
+  setTimeout(resetPagePosition,0);
+});
+addEventListener('load',()=>{
+  resetPagePosition();
+  requestAnimationFrame(resetPagePosition);
+  setTimeout(resetPagePosition,60);
+},{once:true});
 
 const header=document.querySelector('[data-header]');
 const menu=document.querySelector('[data-menu]');
