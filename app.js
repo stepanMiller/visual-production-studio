@@ -43,4 +43,18 @@ document.querySelector('[data-close]').addEventListener('click',()=>dialog.close
 dialog.addEventListener('close',resetDialog);
 dialog.addEventListener('click',event=>{const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close()});
 
-document.querySelector('[data-form]').addEventListener('submit',async event=>{event.preventDefault();const d=new FormData(event.currentTarget);const text=`Новый проект для MILLER\nИмя: ${d.get('name')}\nКонтакт: ${d.get('contact')}\nЗадача: ${d.get('task')}`;try{await navigator.clipboard.writeText(text);status.textContent='Бриф скопирован. Его можно вставить в удобный канал связи.'}catch{status.textContent='Бриф заполнен. Скопируйте данные и отправьте их в удобный канал связи.'}});
+const serviceVideos=[...document.querySelectorAll('[data-service-video]')];
+const loadServiceVideo=video=>{const source=video.querySelector('source[data-src]');if(!source||source.src)return;source.src=source.dataset.src;video.load()};
+if(!reducedMotion.matches&&serviceVideos.length){
+  if('IntersectionObserver' in window){
+    const serviceVideoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{const video=entry.target;if(entry.isIntersecting){loadServiceVideo(video);video.play().catch(()=>{})}else video.pause()}),{rootMargin:'180px 0px',threshold:.1});
+    serviceVideos.forEach(video=>serviceVideoObserver.observe(video));
+  }else serviceVideos.forEach(video=>{loadServiceVideo(video);video.play().catch(()=>{})});
+}
+
+const briefToggle=document.querySelector('[data-brief-toggle]');
+const briefForm=document.querySelector('[data-form]');
+if(briefToggle&&briefForm){
+  briefToggle.addEventListener('click',()=>{const open=briefForm.hidden;briefForm.hidden=!open;briefToggle.setAttribute('aria-expanded',String(open));briefToggle.textContent=open?'Закрыть форму ×':'Оставить заявку →';if(open)briefForm.querySelector('input')?.focus()});
+  briefForm.addEventListener('submit',async event=>{event.preventDefault();const d=new FormData(event.currentTarget);const text=`Новый проект для MILLER\nИмя: ${d.get('name')}\nКонтакт: ${d.get('contact')}\nЗадача: ${d.get('task')}`;try{await navigator.clipboard.writeText(text);status.textContent='Бриф скопирован. Его можно вставить в удобный канал связи.'}catch{status.textContent='Бриф заполнен. Скопируйте данные и отправьте их в удобный канал связи.'}});
+}
