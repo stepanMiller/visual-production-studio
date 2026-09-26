@@ -74,7 +74,7 @@ if(briefToggle&&briefForm){
     const text=`Новый проект для MILLER\nИмя: ${d.get('name')}\nКонтакт: ${d.get('contact')}\nЗадача: ${d.get('task')}`;
     const output=briefForm.querySelector('[data-brief-output]');
     output.value=text;output.hidden=false;
-    try{await navigator.clipboard.writeText(text);status.textContent='Бриф скопирован, но ещё не отправлен. Откройте Telegram, вставьте текст и отправьте его @spartak19876.'}
-    catch{status.textContent='Автокопирование недоступно. Скопируйте текст ниже и отправьте его @spartak19876 в Telegram.';output.focus();output.select()}
+    try{await navigator.clipboard.writeText(text);status.textContent='Бриф скопирован, но ещё не отправлен. Откройте MAX, вставьте текст и отправьте его в чат студии в MAX.'}
+    catch{status.textContent='Автокопирование недоступно. Скопируйте текст ниже и отправьте его в чат студии в MAX.';output.focus();output.select()}
   });
 }
