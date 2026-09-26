@@ -1,6 +1,6 @@
 if('scrollRestoration' in history) history.scrollRestoration='manual';
 const resetPagePosition=()=>{
-  if(location.hash) history.replaceState(null,'',`${location.pathname}${location.search}`);
+  if(location.hash) return;
   scrollTo(0,0);
 };
 resetPagePosition();
@@ -29,6 +29,7 @@ const onScroll=()=>header.classList.toggle('stuck',scrollY>24);
 onScroll();addEventListener('scroll',onScroll,{passive:true});
 
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+if(heroMedia&&reducedMotion.matches){heroMedia.pause();heroMedia.removeAttribute('autoplay')}
 if(hero&&heroMedia&&!reducedMotion.matches){
   const finePointer=matchMedia('(pointer: fine)').matches;
   const setHeroMotion=(x=0,y=0)=>{hero.style.setProperty('--hero-x',`${x}px`);hero.style.setProperty('--hero-y',`${y}px`)};
@@ -66,6 +67,14 @@ if(!reducedMotion.matches&&serviceVideos.length){
 const briefToggle=document.querySelector('[data-brief-toggle]');
 const briefForm=document.querySelector('[data-form]');
 if(briefToggle&&briefForm){
-  briefToggle.addEventListener('click',()=>{const open=briefForm.hidden;briefForm.hidden=!open;briefToggle.setAttribute('aria-expanded',String(open));briefToggle.textContent=open?'Закрыть форму ×':'Оставить заявку →';if(open)briefForm.querySelector('input')?.focus()});
-  briefForm.addEventListener('submit',async event=>{event.preventDefault();const d=new FormData(event.currentTarget);const text=`Новый проект для MILLER\nИмя: ${d.get('name')}\nКонтакт: ${d.get('contact')}\nЗадача: ${d.get('task')}`;try{await navigator.clipboard.writeText(text);status.textContent='Бриф скопирован. Его можно вставить в удобный канал связи.'}catch{status.textContent='Бриф заполнен. Скопируйте данные и отправьте их в удобный канал связи.'}});
+  briefToggle.addEventListener('click',()=>{const open=briefForm.hidden;briefForm.hidden=!open;briefToggle.setAttribute('aria-expanded',String(open));briefToggle.textContent=open?'Закрыть бриф ×':'Подготовить бриф →';if(open)briefForm.querySelector('input')?.focus()});
+  briefForm.addEventListener('submit',async event=>{
+    event.preventDefault();
+    const d=new FormData(event.currentTarget);
+    const text=`Новый проект для MILLER\nИмя: ${d.get('name')}\nКонтакт: ${d.get('contact')}\nЗадача: ${d.get('task')}`;
+    const output=briefForm.querySelector('[data-brief-output]');
+    output.value=text;output.hidden=false;
+    try{await navigator.clipboard.writeText(text);status.textContent='Бриф скопирован, но ещё не отправлен. Откройте Telegram, вставьте текст и отправьте его @spartak19876.'}
+    catch{status.textContent='Автокопирование недоступно. Скопируйте текст ниже и отправьте его @spartak19876 в Telegram.';output.focus();output.select()}
+  });
 }
