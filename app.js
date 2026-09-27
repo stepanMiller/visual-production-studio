@@ -25,6 +25,18 @@ const status=document.querySelector('[data-status]');
 const hero=document.querySelector('[data-hero]');
 const heroMedia=document.querySelector('[data-hero-media]');
 
+// Set data-metrika-id on <html> when a Yandex Metrica counter is installed.
+// These events measure intent; only the studio can confirm a received enquiry in MAX.
+const metrikaId=Number(document.documentElement.dataset.metrikaId);
+const reportGoal=goal=>{
+  if(Number.isSafeInteger(metrikaId)&&metrikaId>0&&typeof window.ym==='function'){
+    window.ym(metrikaId,'reachGoal',goal);
+  }
+};
+document.querySelectorAll('a[href^="https://max.ru/"]').forEach(link=>{
+  link.addEventListener('click',()=>reportGoal('max_contact_click'));
+});
+
 const onScroll=()=>header.classList.toggle('stuck',scrollY>24);
 onScroll();addEventListener('scroll',onScroll,{passive:true});
 
@@ -74,6 +86,7 @@ if(briefToggle&&briefForm){
     const text=`Новый проект для MILLER\nИмя: ${d.get('name')}\nКонтакт: ${d.get('contact')}\nЗадача: ${d.get('task')}`;
     const output=briefForm.querySelector('[data-brief-output]');
     output.value=text;output.hidden=false;
+    reportGoal('brief_prepared');
     try{await navigator.clipboard.writeText(text);status.textContent='Бриф скопирован, но ещё не отправлен. Откройте MAX, вставьте текст и отправьте его в чат студии в MAX.'}
     catch{status.textContent='Автокопирование недоступно. Скопируйте текст ниже и отправьте его в чат студии в MAX.';output.focus();output.select()}
   });
