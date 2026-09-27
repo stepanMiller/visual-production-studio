@@ -21,7 +21,6 @@ const mobileNav=document.querySelector('[data-mobile-nav]');
 const dialog=document.querySelector('[data-dialog]');
 const dialogVideo=document.querySelector('[data-dialog-video]');
 const dialogImage=document.querySelector('[data-dialog-image]');
-const status=document.querySelector('[data-status]');
 const hero=document.querySelector('[data-hero]');
 const heroMedia=document.querySelector('[data-hero-media]');
 
@@ -74,20 +73,4 @@ if(!reducedMotion.matches&&serviceVideos.length){
     const serviceVideoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{const video=entry.target;if(entry.isIntersecting){loadServiceVideo(video);video.play().catch(()=>{})}else video.pause()}),{rootMargin:'180px 0px',threshold:.1});
     serviceVideos.forEach(video=>serviceVideoObserver.observe(video));
   }else serviceVideos.forEach(video=>{loadServiceVideo(video);video.play().catch(()=>{})});
-}
-
-const briefToggle=document.querySelector('[data-brief-toggle]');
-const briefForm=document.querySelector('[data-form]');
-if(briefToggle&&briefForm){
-  briefToggle.addEventListener('click',()=>{const open=briefForm.hidden;briefForm.hidden=!open;briefToggle.setAttribute('aria-expanded',String(open));briefToggle.textContent=open?'Закрыть бриф ×':'Подготовить бриф →';if(open)briefForm.querySelector('input')?.focus()});
-  briefForm.addEventListener('submit',async event=>{
-    event.preventDefault();
-    const d=new FormData(event.currentTarget);
-    const text=`Новый проект для MILLER\nИмя: ${d.get('name')}\nКонтакт: ${d.get('contact')}\nЗадача: ${d.get('task')}`;
-    const output=briefForm.querySelector('[data-brief-output]');
-    output.value=text;output.hidden=false;
-    reportGoal('brief_prepared');
-    try{await navigator.clipboard.writeText(text);status.textContent='Бриф скопирован, но ещё не отправлен. Откройте MAX, вставьте текст и отправьте его в чат студии в MAX.'}
-    catch{status.textContent='Автокопирование недоступно. Скопируйте текст ниже и отправьте его в чат студии в MAX.';output.focus();output.select()}
-  });
 }
