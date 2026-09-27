@@ -584,13 +584,6 @@ url("cases/bali/hero.jpg") center/cover no-repeat;color:#f4f0e9}
 .final-cta-content>p:not(.eyebrow){margin:28px 0;color:#b8b7b1;font-size:13px;line-height:1.55}
 .pill-cream{border:0;background:#f0ede5;color:#171815;cursor:pointer}
 .pill-cream:hover{background:#fff}
-.cta-brief{display:grid;width:min(650px,100%);grid-template-columns:1fr 1fr;gap:18px;margin-top:30px;padding:25px;border:1px solid #ffffff40;background:#0a0b0ad9;backdrop-filter:blur(14px)}
-.cta-brief label{display:grid;gap:7px}
-.cta-brief label:nth-child(3){grid-column:1/-1}
-.cta-brief label span{color:#a7a59f;font-size:8px;letter-spacing:.15em;text-transform:uppercase}
-.cta-brief input,.cta-brief textarea{width:100%;padding:7px 0 10px;border:0;border-bottom:1px solid #ffffff5c;background:transparent;color:#f2efe8;outline:0;resize:vertical;font:16px var(--serif)}
-.cta-brief .pill{justify-self:start}
-.cta-brief output{grid-column:1/-1;color:#d9d5ca;font-size:9px;line-height:1.5}
 
 @media(max-width:1100px){
   .pricing-faq{grid-template-columns:1fr;gap:90px}
@@ -628,12 +621,9 @@ url("cases/bali/hero.jpg") center/cover no-repeat;color:#f4f0e9}
   .final-cta-stone{right:-30%;bottom:-1%;width:130%;height:58%;object-position:center top}
   .final-cta-shade{background:linear-gradient(180deg,#0b0c0b 0%,#0b0c0be8 45%,#0b0c0b4a 75%,#0b0c0b 100%)}
   .final-cta h2{font-size:52px}
-  .cta-brief{grid-template-columns:1fr;padding:20px}
-  .cta-brief label:nth-child(3){grid-column:1}
 }
 .editorial-woman-copy,.final-cta-content{width:min(calc(100% - var(--g)*2),var(--content))}
 @media(max-width:950px){.editorial-woman-copy,.final-cta-content{width:auto;margin-left:var(--g);margin-right:var(--g)}}
-.cta-brief[hidden]{display:none!important}
 
 
 /* MILLER — corrective service pass */
