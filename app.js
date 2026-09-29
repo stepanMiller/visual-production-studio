@@ -33,7 +33,7 @@ const reportGoal=goal=>{
   }
 };
 document.querySelectorAll('a[href^="https://max.ru/"]').forEach(link=>{
-  link.addEventListener('click',()=>reportGoal('max_contact_click'));
+  link.addEventListener('click',()=>reportGoal('contact_max'));
 });
 
 const onScroll=()=>header.classList.toggle('stuck',scrollY>24);
@@ -58,6 +58,10 @@ mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.
 
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -6%'});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*45}ms`;observer.observe(el)});
+
+dialogVideo.addEventListener('play',()=>{
+  if(dialogVideo.currentSrc&&new URL(dialogVideo.currentSrc,location.href).pathname.endsWith('/assets/miller-showreel-v3.mp4'))reportGoal('showreel_play');
+});
 
 function resetDialog(){dialogVideo.pause();dialogVideo.removeAttribute('src');dialogVideo.load();dialogImage.removeAttribute('src');dialogImage.alt='';dialog.classList.remove('image-open')}
 document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{resetDialog();dialogVideo.src=button.dataset.video;dialog.showModal();dialogVideo.play().catch(()=>{})}));
