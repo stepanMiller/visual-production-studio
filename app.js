@@ -60,7 +60,7 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*45}ms`;observer.observe(el)});
 
 dialogVideo.addEventListener('play',()=>{
-  if(dialogVideo.currentSrc&&new URL(dialogVideo.currentSrc,location.href).pathname.endsWith('/assets/miller-showreel-v3.mp4'))reportGoal('showreel_play');
+  if(dialogVideo.currentSrc&&new URL(dialogVideo.currentSrc,location.href).pathname.endsWith('/assets/miller-showreel-v4-24s.mp4'))reportGoal('showreel_play');
 });
 
 function resetDialog(){dialogVideo.pause();dialogVideo.removeAttribute('src');dialogVideo.load();dialogImage.removeAttribute('src');dialogImage.alt='';dialog.classList.remove('image-open')}
