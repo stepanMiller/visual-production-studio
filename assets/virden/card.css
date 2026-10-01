@@ -1,0 +1,4 @@
+/* VIRDEN portfolio card only; existing work and hero remain unchanged. */
+#commercial-web .card-media{height:auto;aspect-ratio:auto;background:transparent}
+#commercial-web .card-media img{height:auto;object-fit:contain;filter:none}
+#commercial-web .card-media:focus-visible{outline:2px solid var(--paper);outline-offset:6px}
