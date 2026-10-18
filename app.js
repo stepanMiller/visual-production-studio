@@ -63,8 +63,8 @@ dialogVideo.addEventListener('play',()=>{
   if(dialogVideo.currentSrc&&new URL(dialogVideo.currentSrc,location.href).pathname.endsWith('/assets/miller-showreel-v4-24s.mp4'))reportGoal('showreel_play');
 });
 
-function resetDialog(){dialogVideo.pause();dialogVideo.removeAttribute('src');dialogVideo.load();dialogImage.removeAttribute('src');dialogImage.alt='';dialog.classList.remove('image-open')}
-document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{resetDialog();dialogVideo.src=button.dataset.video;dialog.showModal();dialogVideo.play().catch(()=>{})}));
+function resetDialog(){dialogVideo.pause();dialogVideo.removeAttribute('src');dialogVideo.removeAttribute('poster');dialogVideo.muted=false;dialogVideo.load();dialogImage.removeAttribute('src');dialogImage.alt='';dialog.classList.remove('image-open');dialog.setAttribute('aria-label','Просмотр медиа')}
+document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{resetDialog();dialogVideo.muted=button.hasAttribute('data-video-muted');const poster=button.querySelector('img');if(poster)dialogVideo.poster=poster.src;dialogVideo.src=button.dataset.video;dialog.setAttribute('aria-label',button.getAttribute('aria-label')||'Просмотр видео');dialog.showModal();dialogVideo.play().catch(()=>{})}));
 document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{resetDialog();dialog.classList.add('image-open');dialogImage.src=button.dataset.image;dialogImage.alt=button.dataset.imageAlt||'Health in Balance — информационный дизайн';dialog.showModal()}));
 document.querySelector('[data-close]').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('close',resetDialog);
