@@ -1,0 +1,233 @@
+{
+  "release": "LOCAL FUNCTIONAL QA PASS — four clips; see separate visual and external-link report",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "available_cards": 4,
+      "card_css_width": 308.88,
+      "new_video_requests_before_click": 0,
+      "js_errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "available_cards": 4,
+      "card_css_width": 350,
+      "new_video_requests_before_click": 0,
+      "js_errors": []
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "scrollWidth": 768,
+      "available_cards": 4,
+      "card_css_width": 336.69,
+      "new_video_requests_before_click": 0,
+      "js_errors": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "available_cards": 4,
+      "card_css_width": 280,
+      "new_video_requests_before_click": 0,
+      "js_errors": []
+    }
+  ],
+  "regressions": [
+    {
+      "width": 1440,
+      "section": "selected-work",
+      "interior_pixel_identical": true,
+      "comparison": "Fixed header/skip hidden; exclude final 1px at new-section boundary"
+    },
+    {
+      "width": 1440,
+      "section": "services",
+      "interior_pixel_identical": false,
+      "comparison": "Fixed header/skip hidden; exclude final 1px at new-section boundary"
+    },
+    {
+      "width": 1440,
+      "section": "prices",
+      "interior_pixel_identical": false,
+      "comparison": "Fixed header/skip hidden; exclude final 1px at new-section boundary"
+    },
+    {
+      "width": 1440,
+      "section": "contact",
+      "interior_pixel_identical": false,
+      "comparison": "Fixed header/skip hidden; exclude final 1px at new-section boundary"
+    },
+    {
+      "width": 1440,
+      "section": "hero",
+      "pixel_identical": true
+    },
+    {
+      "width": 390,
+      "section": "selected-work",
+      "interior_pixel_identical": true,
+      "comparison": "Fixed header/skip hidden; exclude final 1px at new-section boundary"
+    },
+    {
+      "width": 390,
+      "section": "services",
+      "interior_pixel_identical": false,
+      "comparison": "Fixed header/skip hidden; exclude final 1px at new-section boundary"
+    },
+    {
+      "width": 390,
+      "section": "prices",
+      "interior_pixel_identical": false,
+      "comparison": "Fixed header/skip hidden; exclude final 1px at new-section boundary"
+    },
+    {
+      "width": 390,
+      "section": "contact",
+      "interior_pixel_identical": false,
+      "comparison": "Fixed header/skip hidden; exclude final 1px at new-section boundary"
+    },
+    {
+      "width": 390,
+      "section": "hero",
+      "pixel_identical": true
+    }
+  ],
+  "playback": [
+    {
+      "duration": 10.041667,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "width": 1920,
+      "height": 1080,
+      "src": "http://127.0.0.1:8010/assets/product-motion/hotel.mp4",
+      "poster": "http://127.0.0.1:8010/assets/product-motion/hotel-poster.webp",
+      "complete_playback": true,
+      "viewport": 1440,
+      "close_and_focus_restore": true
+    },
+    {
+      "duration": 10.041667,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "src": "http://127.0.0.1:8010/assets/product-motion/can.mp4",
+      "poster": "http://127.0.0.1:8010/assets/product-motion/can-poster.webp",
+      "complete_playback": true,
+      "viewport": 1440,
+      "close_and_focus_restore": true
+    },
+    {
+      "duration": 10,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "width": 1920,
+      "height": 1080,
+      "src": "http://127.0.0.1:8010/assets/product-motion/tumbler.mp4",
+      "poster": "http://127.0.0.1:8010/assets/product-motion/tumbler-poster.webp",
+      "complete_playback": true,
+      "viewport": 1440,
+      "close_and_focus_restore": true
+    },
+    {
+      "duration": 10.041667,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "width": 1920,
+      "height": 1080,
+      "src": "http://127.0.0.1:8010/assets/product-motion/perfume.mp4",
+      "poster": "http://127.0.0.1:8010/assets/product-motion/perfume-poster.webp",
+      "complete_playback": true,
+      "viewport": 1440,
+      "close_and_focus_restore": true
+    },
+    {
+      "duration": 10.041667,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "width": 1920,
+      "height": 1080,
+      "src": "http://127.0.0.1:8010/assets/product-motion/hotel.mp4",
+      "poster": "http://127.0.0.1:8010/assets/product-motion/hotel-poster.webp",
+      "complete_playback": true,
+      "viewport": 390,
+      "close_and_focus_restore": true
+    },
+    {
+      "duration": 10.041667,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "src": "http://127.0.0.1:8010/assets/product-motion/can.mp4",
+      "poster": "http://127.0.0.1:8010/assets/product-motion/can-poster.webp",
+      "complete_playback": true,
+      "viewport": 390,
+      "close_and_focus_restore": true
+    },
+    {
+      "duration": 10,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "width": 1920,
+      "height": 1080,
+      "src": "http://127.0.0.1:8010/assets/product-motion/tumbler.mp4",
+      "poster": "http://127.0.0.1:8010/assets/product-motion/tumbler-poster.webp",
+      "complete_playback": true,
+      "viewport": 390,
+      "close_and_focus_restore": true
+    },
+    {
+      "duration": 10.041667,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "width": 1920,
+      "height": 1080,
+      "src": "http://127.0.0.1:8010/assets/product-motion/perfume.mp4",
+      "poster": "http://127.0.0.1:8010/assets/product-motion/perfume-poster.webp",
+      "complete_playback": true,
+      "viewport": 390,
+      "close_and_focus_restore": true
+    }
+  ],
+  "analytics": [
+    {
+      "width": 1440,
+      "goals": [
+        [
+          113157226,
+          "reachGoal",
+          "showreel_play"
+        ]
+      ],
+      "new_videos_do_not_emit_showreel_goal": true,
+      "showreel_unmuted_after_new_videos": true
+    },
+    {
+      "width": 390,
+      "goals": [
+        [
+          113157226,
+          "reachGoal",
+          "showreel_play"
+        ]
+      ],
+      "new_videos_do_not_emit_showreel_goal": true,
+      "showreel_unmuted_after_new_videos": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "local_references_checked": 77,
+  "missing": [],
+  "max_http_status": 403,
+  "max_external_contact_availability": "Unverified; existing destination unchanged",
+  "cta": [
+    {
+      "width": 1440,
+      "correct_navigation_target": "https://max.ru/u/f9LHodD0cOKr1EQ-eG9PXYtEPooBFEoSqmphG3-ZeqD7tWkHVvWDSCr10J8",
+      "event": [
+        113157226,
+        "reachGoal",
+        "contact_max"
+      ],
+      "external_request_intercepted": true
+    },
+    {
+      "width": 390,
+      "correct_navigation_target": "https://max.ru/u/f9LHodD0cOKr1EQ-eG9PXYtEPooBFEoSqmphG3-ZeqD7tWkHVvWDSCr10J8",
+      "event": [
+        113157226,
+        "reachGoal",
+        "contact_max"
+      ],
+      "external_request_intercepted": true
+    }
+  ]
+}
