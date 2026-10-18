@@ -1,8 +1,7 @@
 {
-  "release_status": "HOLD",
+  "release_status": "QA PASS for four-video integration; existing external MAX contact returned HTTP 403 and remains unverified",
   "required_assets": 4,
-  "available_assets": 3,
-  "missing": "MILLER_WEBSITE_PORTFOLIO_V2_FINISH.zip / WEBSITE_PORTFOLIO/02_VIDEO/MILLER_PORTFOLIO_10S.mp4",
+  "available_assets": 4,
   "assets": [
     {
       "name": "hotel",
@@ -45,6 +44,39 @@
       "poster_bytes": 49816
     },
     {
+      "name": "tumbler",
+      "source": "Two existing completed Runway scenes, per latest user instruction",
+      "sources": [
+        {
+          "task_id": "4f89ceb5-e650-4f3f-9527-fb3344cdb838",
+          "source_sha256": "ac6634c19a3ebe961cc1c707ae70b9adaf943a2ae659e7f121f96b2a0eb1da51",
+          "used_frames": "0 through 119 inclusive (5 seconds @24 fps)"
+        },
+        {
+          "task_id": "787a86bb-09f0-453e-902e-cd2553c78561",
+          "source_sha256": "b029cd5ec87ac68ae26a486285897d63eea0021528df7d74dc783dc433d2fc8c",
+          "used_frames": "0 through 119 inclusive (5 seconds @24 fps)"
+        }
+      ],
+      "delivered_file": "assets/product-motion/tumbler.mp4",
+      "delivered_sha256": "3177ce467f15fcc313b4da09670d306411fb8f901a3809f389c3bce09b422b9a",
+      "bytes": 5037915,
+      "duration_seconds": 10.0,
+      "codec": "h264",
+      "profile": "High",
+      "level": "4.1",
+      "pixel_format": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "frames": 240,
+      "audio_streams": 0,
+      "processing": "First 120 frames of disassembly + first 120 frames of reassembly, hard cut at 5s, CFR 24 fps, libx264 CRF18, High level4.1, faststart. No generation, no interpolation, no soundtrack.",
+      "poster": "assets/product-motion/tumbler-poster.webp",
+      "poster_time_seconds": 8.8,
+      "poster_bytes": 27998
+    },
+    {
       "name": "perfume",
       "source": "Runway completed task 4af1afd0-ea73-4d2f-994f-c1c43a729642",
       "source_sha256": "d565b43599f9db096902ca8759c3e9f137a4958679489c118d109b9436ad92f1",
@@ -64,5 +96,6 @@
       "source_video_packets_unchanged": true,
       "poster_bytes": 59750
     }
-  ]
+  ],
+  "source_override": "User instructed: «Кружка есть на runway достань там». The Library master was not available and is not claimed as the source."
 }
