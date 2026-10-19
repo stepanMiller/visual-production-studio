@@ -1,0 +1,46 @@
+{
+  "source_file": "MILLER_AVITO_CLEAN_10S.mp4",
+  "source_equals_delivered": true,
+  "sha256": "bd24bbee24f3d077e1a0f9a472eb991c2d9c6db60ff2aab7bdedfcab944b72e9",
+  "cache_version": "bd24bbee24f3",
+  "duration_seconds": 10,
+  "resolution": "1920x1080",
+  "fps": 24,
+  "audio_streams": 0,
+  "homepage_only_two_asset_urls_changed": true,
+  "other_three_mp4_hashes_unchanged": true,
+  "styles_and_scripts_unchanged": true,
+  "viewports": [
+    {
+      "src": "http://127.0.0.1:8020/assets/product-motion/tumbler.mp4?v=bd24bbee24f3",
+      "duration": 10,
+      "width": 1920,
+      "height": 1080,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "viewport": 1440,
+      "full_playback": true,
+      "close_and_focus_restore": true,
+      "horizontal_overflow": false,
+      "js_errors": [],
+      "bad_responses": []
+    },
+    {
+      "src": "http://127.0.0.1:8020/assets/product-motion/tumbler.mp4?v=bd24bbee24f3",
+      "duration": 10,
+      "width": 1920,
+      "height": 1080,
+      "muted": true,
+      "controls": true,
+      "inline": true,
+      "viewport": 390,
+      "full_playback": true,
+      "close_and_focus_restore": true,
+      "horizontal_overflow": false,
+      "js_errors": [],
+      "bad_responses": []
+    }
+  ],
+  "result": "PASS"
+}

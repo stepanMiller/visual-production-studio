@@ -1,5 +1,7 @@
 # Issue #1 — Product Motion: four-video integration QA
 
+> Tumbler source updated on 2026-10-19: [uploaded-file replacement and QA](../tumbler-replacement-2026-10-19/README.md). The Runway edit described below is historical; the other three clips are unchanged.
+
 2026-10-18. Baseline: `a1c69beedf02024f758956d0fbaedc4f3ea75010` (`main`).
 
 **Integration QA PASS:** exactly four video cards, full playback at 1440 and 390,
