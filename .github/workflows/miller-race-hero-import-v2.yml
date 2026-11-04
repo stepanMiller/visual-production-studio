@@ -1,0 +1,34 @@
+name: MILLER race hero media import retry
+on:
+  push:
+    branches:
+      - miller/racing-hero-2026-11-04
+    paths:
+      - .github/workflows/miller-race-hero-import-v2.yml
+permissions:
+  contents: write
+jobs:
+  import-hero:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download approved media file
+        run: |
+          set -euo pipefail
+          SOURCE_URL="$(python3 -c 'from pathlib import Path; s=Path(".github/workflows/miller-race-hero-import.yml").read_text(); print(next(z.split("APPROVED_HERO_URL: ")[1].strip().strip(chr(34)) for z in s.splitlines() if "APPROVED_HERO_URL:" in z))')"
+          test -n "$SOURCE_URL"
+          curl --fail --silent --show-error --location --retry 2 "$SOURCE_URL" -o assets/hero-race-kling-v1.mp4
+          test "$(stat -c%s assets/hero-race-kling-v1.mp4)" -gt 1000000
+      - name: Extract poster
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          ffprobe -v error -show_entries format=duration -of csv=p=0 assets/hero-race-kling-v1.mp4
+          ffmpeg -hide_banner -loglevel error -ss 00:00:00.70 -i assets/hero-race-kling-v1.mp4 -frames:v 1 -update 1 -q:v 3 -y assets/hero-race-poster.jpg
+      - name: Commit approved video only on isolated branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/hero-race-kling-v1.mp4 assets/hero-race-poster.jpg
+          git commit -m "assets: stage MILLER race hero and poster"
+          git push origin HEAD:refs/heads/miller/racing-hero-2026-11-04
