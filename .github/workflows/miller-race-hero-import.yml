@@ -1,0 +1,29 @@
+name: MILLER one-time race hero asset import
+on:
+  push:
+    branches:
+      - miller/racing-hero-2026-11-04
+    paths:
+      - .github/workflows/miller-race-hero-import.yml
+permissions:
+  contents: write
+jobs:
+  import-hero:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch approved MILLER hero from signed delivery URL
+        env:
+          APPROVED_HERO_URL: "https://elevenlabsusercontent.com/database/workspace/aacfba765f10448888c57a1e26fc7bc3/content_generation/WitWtgpqUrcusPNZehAT/4eqqtyZIb32Bhlxwy8zI/content.mp4?Expires=1793797200&KeyName=assets-cdn-key-1&Signature=igdN_Ey3kH0wITbRTC0X4TPe64U="
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl --fail --silent --show-error --location --retry 2 --connect-timeout 20 --max-time 180 "$APPROVED_HERO_URL" -o assets/hero-race-kling-v1.mp4
+          test "$(stat -c%s assets/hero-race-kling-v1.mp4)" -gt 1000000
+          ffprobe -v error -show_entries stream=codec_name,width,height -of json assets/hero-race-kling-v1.mp4 >/dev/null
+          ffmpeg -hide_banner -loglevel error -ss 00:00:00.70 -i assets/hero-race-kling-v1.mp4 -frames:v 1 -update 1 -q:v 3 -y assets/hero-race-poster.jpg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/hero-race-kling-v1.mp4 assets/hero-race-poster.jpg
+          git commit -m "assets: add approved MILLER race hero and poster"
+          git push origin HEAD:refs/heads/miller/racing-hero-2026-11-04
